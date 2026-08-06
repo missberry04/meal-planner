@@ -197,8 +197,8 @@ export default function App() {
         <p className="eyebrow">Weekly Meal Plan</p>
         <h1>Feed the week, on your terms.</h1>
         <p className="sub">
-          Set a budget, calorie goal, restrictions, or a medical condition :
-          fill in only what matters to you. Everything else stays flexible.
+          Set a budget, calorie goal, restrictions, or a medical condition.
+          Fill in only what matters to you. Everything else stays flexible.
         </p>
       </header>
 
