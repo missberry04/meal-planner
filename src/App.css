@@ -1,0 +1,395 @@
+:root {
+  --bg: #f3f5ef;
+  --card: #ffffff;
+  --ink: #21261d;
+  --ink-soft: #5c6355;
+  --pine: #1f3a3a;
+  --pine-dark: #16292a;
+  --mustard: #c98a2b;
+  --sage: #7a9e7e;
+  --alert: #b5482a;
+  --border: #e1dfd2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Fraunces", Georgia, serif;
+  margin: 0;
+}
+
+.app {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+.hero {
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  color: var(--sage);
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.hero .sub {
+  color: var(--ink-soft);
+  max-width: 52ch;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.field.inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.field input,
+.field select {
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--ink);
+  background: #fafaf6;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.toggle-row {
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--pine);
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.advanced {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.section-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  font-weight: 700;
+  margin: 18px 0 8px;
+}
+
+.calc-note {
+  font-size: 14px;
+  color: var(--pine);
+  background: #eaf1ee;
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.chip {
+  border: 1px solid var(--border);
+  background: #fafaf6;
+  color: var(--ink-soft);
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.chip.active {
+  background: var(--sage);
+  border-color: var(--sage);
+  color: white;
+}
+
+.chip.health.active {
+  background: var(--alert);
+  border-color: var(--alert);
+}
+
+.text-input {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  font-family: inherit;
+  margin-bottom: 6px;
+  background: #fafaf6;
+}
+
+.disclaimer {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 8px 0 4px;
+  line-height: 1.4;
+}
+
+.generate-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: var(--pine);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.generate-btn:disabled {
+  opacity: 0.75;
+  cursor: default;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.results {
+  margin-top: 28px;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  background: #ebe9dd;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--card);
+  color: var(--pine);
+}
+
+.weekly-total {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+
+.weekly-total strong {
+  color: var(--mustard);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.day-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0 12px 12px 12px;
+  padding: 20px;
+}
+
+.day-summary {
+  display: flex;
+  gap: 14px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.error-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--alert);
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.retry-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--alert);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.meals {
+  display: grid;
+  gap: 16px;
+}
+
+.meal-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  position: relative;
+}
+
+.meal-tab {
+  display: inline-block;
+  background: var(--pine);
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.meal-card h3 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.meal-meta,
+.macros {
+  display: flex;
+  gap: 12px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.macros {
+  color: var(--sage);
+  font-weight: 600;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  font-weight: 700;
+  margin: 12px 0 4px;
+}
+
+.meal-card ul,
+.meal-card ol {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.fit-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--pine);
+  background: #eaf1ee;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: 27px;
+  }
+}
