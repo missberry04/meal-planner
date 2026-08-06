@@ -278,7 +278,7 @@ export default function App() {
         {showAdvanced && (
           <div className="advanced">
             <p className="section-label">
-              Calorie target (optional — used to estimate a daily calorie goal)
+              Calorie target (optional : used to estimate a daily calorie goal)
             </p>
             <div className="field-row toggle-row">
               <label className="checkbox">
