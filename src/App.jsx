@@ -197,7 +197,7 @@ export default function App() {
         <p className="eyebrow">Weekly Meal Plan</p>
         <h1>Feed the week, on your terms.</h1>
         <p className="sub">
-          Set a budget, calorie goal, restrictions, or a medical condition —
+          Set a budget, calorie goal, restrictions, or a medical condition :
           fill in only what matters to you. Everything else stays flexible.
         </p>
       </header>
@@ -428,8 +428,8 @@ export default function App() {
             />
             <p className="disclaimer">
               <AlertCircle size={14} />
-              This isn't medical advice. It's general meal guidance — check
-              with your doctor or a dietitian for anything condition-specific.
+              This isn't medical advice. It's general meal guidance. Please check
+              with your doctor or a dietitian for anything condition specific.
             </p>
 
             <p className="section-label">Cuisine preference (optional)</p>
